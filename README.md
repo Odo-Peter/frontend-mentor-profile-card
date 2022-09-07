@@ -32,7 +32,7 @@ Below is the screenshots of the challenge, the desktop view is 1440px and the mo
 ### Links
 
 - Solution URL: (https://github.com/Odo-Peter/frontend-mentor-profile-card)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://frontend-mentor-profile-card-tau.vercel.app)
 
 ## My process
 
