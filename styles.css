@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --official-bg: hsl(185, 75%, 39%);
+  --dark-text: hsl(229, 23%, 23%);
+  --light-text: hsl(227, 10%, 46%);
+  --lighter-text: hsl(0, 0%, 59%);
+}
+
+body {
+  position: relative;
+  background-color: var(--official-bg);
+  font-family: 'Kumbh Sans', sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--official-bg);
+  width: 100%;
+  height: 100%;
+}
+
+.container::before {
+  content: ' ';
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-image: url('./img/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  top: 49%;
+  left: 47%;
+  overflow: hidden;
+}
+
+.container::after {
+  content: ' ';
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-image: url('./img/bg-pattern-top.svg');
+  background-repeat: no-repeat;
+  scale: 1.2;
+  transform: rotateX(180deg);
+  rotate: -70deg;
+  top: -90%;
+  left: -25%;
+  overflow: hidden;
+}
+
+.container .card-container {
+  z-index: 10;
+  position: relative;
+  border-radius: 16px;
+  background-color: white;
+  height: 56vh;
+  width: 25vw;
+}
+
+.container .card-container .card-bg {
+  width: 100%;
+  height: 36%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.container .card-container svg {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.container .card-container .img-div {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.container .card-container .img-div img {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+}
+
+.container .card-container .content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card-container .content h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-text);
+  padding: 10px;
+  text-align: center;
+}
+
+.container .card-container .content h1 span {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--light-text);
+  margin-left: 4px;
+}
+
+.container .card-container .content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+.container .card-container .info {
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 0.1px solid rgb(233, 230, 230);
+}
+
+.container .card-container .info div {
+  margin-right: 1rem;
+  padding: 1.2rem 0 0 0;
+}
+
+.container .card-container .info div:nth-child(3) {
+  margin-right: 0;
+}
+
+.container .card-container .info .followers h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-text);
+  text-align: center;
+  padding: 4px;
+}
+
+.container .card-container .info .followers p {
+  font-size: 11px;
+  color: var(--lighter-text);
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.container .card-container .info .likes h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-text);
+  text-align: center;
+  padding: 4px;
+}
+
+.container .card-container .info .likes p {
+  font-size: 11px;
+  color: var(--lighter-text);
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.container .card-container .info .follows h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-text);
+  text-align: center;
+  padding: 4px;
+}
+
+.container .card-container .info .follows p {
+  font-size: 11px;
+  color: var(--lighter-text);
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+/* Media Queries*/
+@media (max-width: 375px) {
+  .container::before {
+    content: ' ';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    scale: 0.7;
+    background-image: url('./img/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+  }
+
+  .container::after {
+    content: ' ';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url('./img/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    scale: 0.8;
+    transform: rotate(240deg);
+    top: -35%;
+    left: -30%;
+  }
+
+  .container .card-container {
+    z-index: 10;
+    position: absolute;
+    border-radius: 16px;
+    background-color: white;
+    height: 65vh;
+    width: 88vw;
+  }
+
+  .container .card-container .img-div {
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 50%;
+    z-index: 99;
+  }
+
+  .container .card-container .info div {
+    padding: 12px 0 0 0;
+  }
+}
